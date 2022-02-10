@@ -1,0 +1,59 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table_sort th {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #909090;
+    background: #fff;
+    padding: 22px 20px 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #D6D7F9;    
+}
+
+.table_sort td {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #222222;
+    padding: 21px 20px;
+}
+
+.table_sort .rating {
+    color: #5A60E7;
+    font-weight: 600;
+}
+
+.table_sort td,
+.table_sort th {
+    text-align: left;    
+}
+
+.table_sort tbody tr:nth-child(odd) {
+    background: #FAF9F9;
+}
+
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+    position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+    right: 8px;
+    position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+	content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+	content: "▲"
+}
